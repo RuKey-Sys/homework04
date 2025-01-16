@@ -65,12 +65,3 @@ async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 
-
-if __name__ == "__main__":
-    import asyncio
-
-    async def main():
-        await init_db()
-        print("Таблицы созданы.")
-
-    asyncio.run(main())
