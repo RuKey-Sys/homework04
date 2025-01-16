@@ -60,7 +60,7 @@ class Post(Base):
     def __repr__(self):
         return f"<Post(title={self.title}, body={self.body}, user_id={self.user_id})>"
 
-
+ 
 async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)

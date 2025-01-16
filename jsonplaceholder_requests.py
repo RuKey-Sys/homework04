@@ -12,7 +12,7 @@ async def fetch_json(session, url):
     except aiohttp.ClientError as e:
         print(f"Ошибка: {e}")
         return None
-
+ 
 async def fetch_users_data():
     async with aiohttp.ClientSession() as session:
         return await fetch_json(session, USERS_DATA_URL)

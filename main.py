@@ -58,7 +58,7 @@ async def add_users_and_posts_to_db(users_data: List[dict], posts_data: List[dic
 
         print("Запись пользователей и постов завершена.")
 
-
+ 
 async def async_main():
     await init_db()
     print("Загрузка данных...")
